@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiceRolls">
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="416dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d12button"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/d4button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="58dp"
+        android:onClick="onClick"
+        android:text="D4"
+        app:layout_constraintBottom_toTopOf="@+id/d10button"
+        app:layout_constraintEnd_toStartOf="@+id/d6button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/d6button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="58dp"
+        android:onClick="onClick"
+        android:text="D6"
+        app:layout_constraintBottom_toTopOf="@+id/d10button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/d8button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="58dp"
+        android:onClick="onClick"
+        android:text="D8"
+        app:layout_constraintBottom_toTopOf="@+id/d10button"
+        app:layout_constraintEnd_toEndOf="@+id/d100button"
+        app:layout_constraintStart_toEndOf="@+id/d6button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/d10button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:onClick="onClick"
+        android:text="D10"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/d12button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="onClick"
+        android:text="D12"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toStartOf="@+id/d20button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/d20button" />
+
+    <Button
+        android:id="@+id/d20button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="onClick"
+        android:text="D20"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/d100button"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="onClick"
+        android:text="D100"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/d20button"
+        app:layout_constraintTop_toTopOf="@+id/d20button" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Result"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/textRollResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text=""
+        android:textSize="64dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

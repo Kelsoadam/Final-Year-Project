@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:label="Home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Strength"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textStrMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStrength" />
+
+    <EditText
+        android:id="@+id/editStrScore"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textIntelligence"
+        app:layout_constraintEnd_toEndOf="@+id/textStrength"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/textStrength"
+        app:layout_constraintTop_toBottomOf="@+id/textStrMod"
+        app:layout_constraintVertical_bias="0.145"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textDexterity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="Dexterity"
+        app:layout_constraintStart_toEndOf="@+id/textStrength"
+        app:layout_constraintTop_toTopOf="@+id/textStrength" />
+
+    <TextView
+        android:id="@+id/textDexMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/textConMod"
+        app:layout_constraintStart_toEndOf="@+id/textStrMod"
+        app:layout_constraintTop_toBottomOf="@+id/textDexterity" />
+
+    <EditText
+        android:id="@+id/editDexScore"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textWisdom"
+        app:layout_constraintEnd_toEndOf="@+id/textDexterity"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/textDexterity"
+        app:layout_constraintTop_toBottomOf="@+id/textDexMod"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textConstitution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="24dp"
+        android:text="Constitution"
+        app:layout_constraintBottom_toTopOf="@+id/textCharisma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textDexterity"
+        app:layout_constraintTop_toTopOf="@+id/textDexterity" />
+
+    <TextView
+        android:id="@+id/textConMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textConstitution" />
+
+    <EditText
+        android:id="@+id/editConScore"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/textCharisma"
+        app:layout_constraintEnd_toEndOf="@+id/textConstitution"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="@+id/textConstitution"
+        app:layout_constraintTop_toBottomOf="@+id/textConMod"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textIntelligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:text="Intelligence"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStrength" />
+
+    <TextView
+        android:id="@+id/textIntMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="3dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/editIntScore"
+        app:layout_constraintEnd_toStartOf="@+id/textWisMod"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIntelligence" />
+
+    <EditText
+        android:id="@+id/editIntScore"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textIntelligence"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/textIntelligence"
+        app:layout_constraintTop_toBottomOf="@+id/textIntMod" />
+
+    <TextView
+        android:id="@+id/textWisdom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="84dp"
+        android:text="Wisdom"
+        app:layout_constraintStart_toEndOf="@+id/textIntelligence"
+        app:layout_constraintTop_toBottomOf="@+id/textDexterity" />
+
+    <TextView
+        android:id="@+id/textWisMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="3dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/editWisScore"
+        app:layout_constraintEnd_toStartOf="@+id/textCharMod"
+        app:layout_constraintStart_toEndOf="@+id/textIntMod"
+        app:layout_constraintTop_toBottomOf="@+id/textWisdom" />
+
+    <EditText
+        android:id="@+id/editWisScore"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/editIntScore"
+        app:layout_constraintEnd_toEndOf="@+id/textWisdom"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/textWisdom"
+        app:layout_constraintTop_toBottomOf="@+id/textWisMod"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textCharisma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="24dp"
+        android:text="Charisma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toEndOf="@+id/textWisdom"
+        app:layout_constraintTop_toBottomOf="@+id/textConstitution" />
+
+    <TextView
+        android:id="@+id/textCharMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="3dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/editCharScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textWisMod"
+        app:layout_constraintTop_toBottomOf="@+id/textCharisma" />
+
+    <EditText
+        android:id="@+id/editCharScore"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/editWisScore"
+        app:layout_constraintEnd_toEndOf="@+id/textCharisma"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/textCharisma"
+        app:layout_constraintTop_toBottomOf="@+id/textCharMod"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/NavButtonDiceRolls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="259dp"
+        android:text="Dice Roller"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
