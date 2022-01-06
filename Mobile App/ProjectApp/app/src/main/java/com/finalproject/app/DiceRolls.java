@@ -20,9 +20,15 @@ public class DiceRolls extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice_rolls);
 
-        txt = findViewById(R.id.textRollResult);
+        txt = findViewById(R.id.textRollResult); // Sets txt to be the id of our result label
     }
 
+    /*
+    This switch is called on clicking the dice buttons,
+    when the onClick is called the switch will check to
+    see the id of the button that called it and call
+    the method for the correlating dice roll
+    */
     public void onClick(View v){
         switch(v.getId()){
             case R.id.d4button:
@@ -48,6 +54,12 @@ public class DiceRolls extends AppCompatActivity {
                 break;
         }
     }
+
+    /*
+    These methods generate a random int from 1 to x based on the dice,
+    once the roll is completed it is converted to a string and used to
+    change the .text value of the result label to the roll result value
+    */
 
     public void D4() {
         int val = roll.nextInt(4) +1;
