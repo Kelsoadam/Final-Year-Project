@@ -10,15 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalYearProjectApp">
         <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".DiceRolls"
-            android:exported="false"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
