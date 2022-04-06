@@ -14,7 +14,6 @@
             android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background=""
             android:theme= "@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:titleTextColor="@color/white"
             />
@@ -25,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/activityContainer"
-        android:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
         />
 

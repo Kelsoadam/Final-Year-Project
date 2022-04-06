@@ -10,17 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalYearProjectApp">
         <activity
-            android:name=".DrawerBaseActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DiceRolls"
+            android:name=".DiceRollerActivity"
             android:configChanges="orientation"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DashboardActivity"
             android:configChanges="orientation"
             android:exported="true">
             <intent-filter>
