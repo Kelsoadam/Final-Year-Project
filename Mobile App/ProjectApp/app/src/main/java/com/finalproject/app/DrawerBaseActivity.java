@@ -41,7 +41,12 @@ public class DrawerBaseActivity extends AppCompatActivity implements NavigationV
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        drawerLayout.closeDrawer(GravityCompat.START);
+        drawerLayout.closeDrawer(GravityCompat.START); // Closes navigation bar on selecting a page
+
+        /*
+        This switch checks to see what page as been selected from the list and will run the code to
+        open the corresponding activity
+         */
         switch (item.getItemId()) {
             case R.id.nav_roller:
                 startActivity(new Intent(this, DiceRollerActivity.class));

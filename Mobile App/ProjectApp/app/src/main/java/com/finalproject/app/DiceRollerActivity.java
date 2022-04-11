@@ -28,30 +28,32 @@ public class DiceRollerActivity extends DrawerBaseActivity {
     This switch is called on clicking the dice buttons,
     when the onClick is called the switch will check to
     see the id of the button that called it and call
-    the method for the correlating dice roll
+    the method for the correlating dice roll; once the
+    method has been called, the result will be used to set
+    the text value of our TextView object to the rolled result
     */
     public void onClick(View v){
         switch(v.getId()){
             case R.id.d4button:
-                DiceRolls.D4();
+                txt.setText(Integer.toString(DiceRolls.D4()));
                 break;
             case R.id.d6button:
-                DiceRolls.D6();
+                txt.setText(Integer.toString(DiceRolls.D6()));
                 break;
             case R.id.d8button:
-                DiceRolls.D8();
+                txt.setText(Integer.toString(DiceRolls.D8()));
                 break;
             case R.id.d10button:
-                DiceRolls.D10();
+                txt.setText(Integer.toString(DiceRolls.D10()));
                 break;
             case R.id.d12button:
-                DiceRolls.D12();
+                txt.setText(Integer.toString(DiceRolls.D12()));
                 break;
             case R.id.d20button:
-                DiceRolls.D20();
+                txt.setText(Integer.toString(DiceRolls.D20()));
                 break;
             case R.id.d100button:
-                DiceRolls.D100();
+                txt.setText(Integer.toString(DiceRolls.D100()));
                 break;
         }
     }

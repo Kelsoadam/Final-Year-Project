@@ -21,32 +21,25 @@ public class DiceRolls extends AppCompatActivity {
     */
 
     static int D4() {
-        int val = roll.nextInt(4) +1;
-        return result;
+        return roll.nextInt(4) +1;
     }
     static int D6() {
-        int val = roll.nextInt(6) +1;
-        return result;
+        return roll.nextInt(6) +1;
     }
     static int D8() {
-        int val = roll.nextInt(8) +1;
-        return result;
+        return roll.nextInt(8) +1;
     }
     static int D10() {
-        int val = roll.nextInt(10) +1;
-        return result;
+        return roll.nextInt(10) +1;
     }
     static int D12() {
-        int val = roll.nextInt(12) +1;
-        return result;
+        return roll.nextInt(12) +1;
     }
     static int D20() {
-        int val = roll.nextInt(20) +1;
-        return result;
+        return roll.nextInt(20) +1;
     }
     static int D100() {
-        int val = roll.nextInt(100) +1;
-        return result;
+        return roll.nextInt(100) +1;
     }
 
 }
