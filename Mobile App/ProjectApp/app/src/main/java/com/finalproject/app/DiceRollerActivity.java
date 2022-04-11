@@ -28,7 +28,9 @@ public class DiceRollerActivity extends DrawerBaseActivity {
     This switch is called on clicking the dice buttons,
     when the onClick is called the switch will check to
     see the id of the button that called it and call
-    the method for the correlating dice roll
+    the method for the correlating dice roll; once the
+    method has been called, the result will be used to set
+    the text value of our TextView object to the rolled result
     */
     public void onClick(View v){
         switch(v.getId()){
