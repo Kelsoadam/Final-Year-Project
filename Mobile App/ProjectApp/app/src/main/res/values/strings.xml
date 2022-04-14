@@ -8,4 +8,74 @@
     <string name="nav_roller">Dice Roller</string>
     <string name="nav_sheet">Character Sheet</string>
 
+    <string name="sample_name">James</string>
+    <string name="sample_level">1</string>
+
+    <string name="class_head">Class:</string>
+    <string name="level_head">Level:</string>
+    <string name="race_head">Race:</string>
+    <string name="align_head">Alignment:</string>
+
+    <string-array name="races">
+        <item>Select race</item>
+        <item>Aarakocra</item>
+        <item>Aasimar</item>
+        <item>Bugbear</item>
+        <item>Centaur</item>
+        <item>Changeling</item>
+        <item>Dragonborn</item>
+        <item>Dwarf</item>
+        <item>Elf</item>
+        <item>Firbolg</item>
+        <item>Genasi</item>
+        <item>Gith</item>
+        <item>Gnome</item>
+        <item>Goblin</item>
+        <item>Goliath</item>
+        <item>Grung</item>
+        <item>Half-Elf</item>
+        <item>Half-Orc</item>
+        <item>Halfling</item>
+        <item>Hobgoblin</item>
+        <item>Human</item>
+        <item>Kalashtar</item>
+        <item>Kenku</item>
+        <item>Kobold</item>
+        <item>Lizardfolk</item>
+        <item>Loxodon</item>
+        <item>Minotaur</item>
+        <item>Orc</item>
+        <item>Shifter</item>
+        <item>Simic Hybrid</item>
+        <item>Tabaxi</item>
+        <item>Tiefling</item>
+        <item>Tortle</item>
+        <item>Triton</item>
+        <item>Vedalken</item>
+        <item>Warforged</item>
+        <item>Yuan-ti Pureblood</item>
+
+    </string-array>
+
+    <string-array name="classes">
+        <item>Select class</item>
+        <item>Artificer</item>
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Blood Hunter</item>
+        <item>Cleric</item>
+        <item>Druid</item>
+        <item>Fighter</item>
+        <item>Monk</item>
+        <item>Paladin</item>
+        <item>Ranger</item>
+        <item>Rogue</item>
+        <item>Sorcerer</item>
+        <item>Warlock</item>
+        <item>Wizard</item>
+
+    </string-array>
+
+
+
 </resources>

@@ -5,32 +5,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+import com.finalproject.app.databinding.ActivityDiceRollerBinding;
+import com.finalproject.app.databinding.ActivityMainBinding;
 
-    private Button button;
+public class MainActivity extends DrawerBaseActivity {
+
+    ActivityMainBinding activityMainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(activityMainBinding.getRoot());
+        allocateActivityTitle("Character Sheet");
 
-        // This code sets up the button tat is used to navigate to the
-        // dice roll activity
-        button = (Button) findViewById(R.id.NavButtonDiceRolls);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openDiceRolls();
-            }
-        });
+        Spinner raceSpinner = (Spinner) findViewById(R.id.selectRace);
+        ArrayAdapter<String> raceAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.races));
+        raceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        raceSpinner.setAdapter(raceAdapter);
+
+        Spinner classSpinner = (Spinner) findViewById(R.id.selectClass);
+        ArrayAdapter<String> classAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.classes));
+        classAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        classSpinner.setAdapter(classAdapter);
+
     }
 
-    // method called when button to change activity is pressed to start the
-    // dice roll activity
-    public void openDiceRolls(){
-        Intent intent = new Intent(this, DiceRolls.class);
-        startActivity(intent);
+    public void onClick(View v){
+
     }
 }
