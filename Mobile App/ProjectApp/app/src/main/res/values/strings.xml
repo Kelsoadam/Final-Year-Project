@@ -22,6 +22,7 @@
     <string name="speed_head">Speed:</string>
     <string name="currentHP_head">Current Hit Points:</string>
     <string name="tempHit_head">Temporary Hit Points:</string>
+    <string name="maxHP_head">Max Hit Points:</string>
 
     <string name="strength_head">Strength:</string>
     <string name="dex_head">Dexterity:</string>
@@ -29,12 +30,18 @@
     <string name="int_head">Intelligence:</string>
     <string name="wis_head">Wisdom:</string>
     <string name="char_head">Charisma:</string>
-    <string name="maxHP_head">Max Hit Points:</string>
+
+
     <string name="set_stats">\?</string>
     <string name="sample_stat">12</string>
     <string name="sample_TempHP">0</string>
     <string name="sample_HP">30</string>
     <string name="sample_AC">12</string>
+
+    <string name="rest_head">Rest</string>
+    <string name="level_up">Level Up:</string>
+    <string name="SavingThrow_Header">Saving Throws</string>
+    <string name="restBtn_text"><![CDATA[<3]]></string>
 
     <string-array name="races">
         <item>Select race</item>
