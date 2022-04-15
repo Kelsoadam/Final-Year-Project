@@ -29,6 +29,7 @@
     <string name="int_head">Intelligence:</string>
     <string name="wis_head">Wisdom:</string>
     <string name="char_head">Charisma:</string>
+    <string name="maxHP_head">Max Hit Points:</string>
 
     <string-array name="races">
         <item>Select race</item>

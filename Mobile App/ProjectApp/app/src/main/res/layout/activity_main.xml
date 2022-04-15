@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/editTextMaxHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:hint="30"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textMaxHP_head"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
+        app:layout_constraintStart_toEndOf="@+id/textMaxHP_head"
+        app:layout_constraintStart_toStartOf="@+id/editTextAC"
+        app:layout_constraintTop_toTopOf="@+id/textMaxHP_head"
+        app:layout_constraintVertical_bias="0.388" />
+
     <View
         android:id="@+id/dividerNavHeader"
         android:layout_width="409dp"
@@ -163,7 +179,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="visible" />
 
     <View
         android:id="@+id/dividerHealth"
@@ -185,41 +202,72 @@
         android:id="@+id/textViewAC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/ac_head"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintBottom_toTopOf="@+id/dividerStats"
+        app:layout_constraintEnd_toStartOf="@+id/dividerHealth"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
+        app:layout_constraintVertical_bias="0.35" />
 
     <TextView
         android:id="@+id/textViewInit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/initiative_head"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="282dp" />
+        app:layout_constraintEnd_toStartOf="@+id/scrollView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewAC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAC" />
 
     <TextView
         android:id="@+id/textViewSpeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="@string/speed_head"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewInit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewInit"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInit" />
+
+    <TextView
+        android:id="@+id/textMaxHP_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/maxHP_head"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSpeed"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="@+id/textViewSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpeed" />
 
     <TextView
         android:id="@+id/textViewCurrHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="@string/currentHP_head"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="375dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textMaxHP_head"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textMaxHP_head"
+        app:layout_constraintTop_toBottomOf="@+id/textMaxHP_head" />
 
     <TextView
         android:id="@+id/textViewTempHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tempHit_head"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="422dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrHealth"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrHealth"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCurrHP"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textStrHead"
@@ -287,6 +335,59 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <EditText
+        android:id="@+id/editTextAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:hint="12"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAC"
+        app:layout_constraintStart_toEndOf="@+id/textViewAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewAC" />
+
+    <TextView
+        android:id="@+id/textSpeed_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSpeed"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
+        app:layout_constraintStart_toStartOf="@+id/editTextAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewSpeed" />
+
+    <EditText
+        android:id="@+id/editTextCurrHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="50"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrHealth"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrHealth"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrHealth"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTempHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="50"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCurrHP"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="@+id/editTextCurrHP"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempHealth"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
