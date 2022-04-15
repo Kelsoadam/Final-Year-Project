@@ -48,8 +48,9 @@
     <string name="roll">Roll</string>
     <string name="death_success_header">Successes:</string>
     <string name="death_fail_header">Failed</string>
+
     <string name="skillsTable_head">Skills</string>
-    <string name="acro_head">Acrobatics:</string>
+    <string name="acro_head">Acrobatics</string>
     <string name="Animal_head">Animal Handling</string>
     <string name="arcana_head">Arcana</string>
     <string name="ath_head">Athletics</string>
