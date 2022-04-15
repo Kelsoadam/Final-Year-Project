@@ -30,6 +30,11 @@
     <string name="wis_head">Wisdom:</string>
     <string name="char_head">Charisma:</string>
     <string name="maxHP_head">Max Hit Points:</string>
+    <string name="set_stats">\?</string>
+    <string name="sample_stat">12</string>
+    <string name="sample_TempHP">0</string>
+    <string name="sample_HP">30</string>
+    <string name="sample_AC">12</string>
 
     <string-array name="races">
         <item>Select race</item>
@@ -92,6 +97,8 @@
     </string-array>
 
     <string-array name="alignments">
+        <item>Select Alignment</item>
+
         <item>Lawful Good</item>
         <item>Lawful Neutral</item>
         <item>Lawful Evil</item>

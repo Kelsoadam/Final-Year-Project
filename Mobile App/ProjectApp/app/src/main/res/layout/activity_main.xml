@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -11,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="2"
-        android:hint="30"
+        android:hint="@string/sample_HP"
         android:inputType="number"
         android:textAlignment="center"
         android:textSize="12sp"
@@ -31,8 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
-        />
+        app:layout_constraintVertical_bias="0.08" />
 
     <TextView
         android:id="@+id/CharName_header"
@@ -179,19 +179,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.95"
         tools:visibility="visible" />
 
     <View
         android:id="@+id/dividerHealth"
         android:layout_width="1dp"
-        android:layout_height="409dp"
+        android:layout_height="390dp"
         android:layout_marginStart="172dp"
         android:layout_marginTop="183dp"
         android:layout_marginEnd="238dp"
         android:layout_marginBottom="139dp"
         android:background="?android:attr/listDivider"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -219,7 +219,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/initiative_head"
-        app:layout_constraintEnd_toStartOf="@+id/scrollView"
+        app:layout_constraintEnd_toStartOf="@+id/scrollViewRolls"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textViewAC"
         app:layout_constraintTop_toBottomOf="@+id/textViewAC" />
@@ -270,57 +270,65 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textStrHead"
+        android:id="@+id/textSpeed_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/strength_head"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="627dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSpeed"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
+        app:layout_constraintStart_toStartOf="@+id/editTextAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewSpeed" />
 
-    <TextView
-        android:id="@+id/textDexHead"
+    <EditText
+        android:id="@+id/editTextAC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/dex_head"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="627dp" />
+        android:ems="2"
+        android:hint="@string/sample_AC"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAC"
+        app:layout_constraintStart_toEndOf="@+id/textViewAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewAC"
+        tools:ignore="Autofill" />
 
-    <TextView
-        android:id="@+id/textConHead"
+    <EditText
+        android:id="@+id/editTextTempHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/con_head"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="627dp" />
+        android:ems="3"
+        android:hint="@string/sample_TempHP"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCurrHP"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="@+id/editTextCurrHP"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempHealth"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill" />
 
-    <TextView
-        android:id="@+id/textIntHead"
+    <EditText
+        android:id="@+id/editTextCurrHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/int_head"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="627dp" />
-
-    <TextView
-        android:id="@+id/textWisHead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wis_head"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="627dp" />
-
-    <TextView
-        android:id="@+id/textCharHead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/char_head"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="673dp" />
+        android:ems="3"
+        android:hint="@string/sample_HP"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrHealth"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrHealth"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrHealth"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill" />
 
     <ScrollView
-        android:id="@+id/scrollView"
+        android:id="@+id/scrollViewRolls"
         android:layout_width="236dp"
-        android:layout_height="444dp"
+        android:layout_height="400dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -336,58 +344,224 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <EditText
-        android:id="@+id/editTextAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="2"
-        android:hint="12"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewAC"
-        app:layout_constraintStart_toEndOf="@+id/textViewAC"
-        app:layout_constraintTop_toTopOf="@+id/textViewAC" />
-
-    <TextView
-        android:id="@+id/textSpeed_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewSpeed"
-        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
-        app:layout_constraintStart_toStartOf="@+id/editTextAC"
-        app:layout_constraintTop_toTopOf="@+id/textViewSpeed" />
-
-    <EditText
-        android:id="@+id/editTextCurrHP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="3"
-        android:hint="50"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="italic"
+    <HorizontalScrollView
+        android:id="@+id/scrollViewStats"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textViewCurrHealth"
-        app:layout_constraintStart_toStartOf="@+id/textViewCurrHealth"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCurrHealth"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerStats">
 
-    <EditText
-        android:id="@+id/editTextTempHP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="3"
-        android:hint="50"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextCurrHP"
-        app:layout_constraintHorizontal_bias="0.383"
-        app:layout_constraintStart_toStartOf="@+id/editTextCurrHP"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTempHealth"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <TableLayout
+                android:id="@+id/LeftStatTable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TableRow android:id="@+id/TableRowStrength">
+
+                    <TextView
+                        android:id="@+id/textStrHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/strength_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextStr"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <TableRow>
+
+                            <Button
+                                android:id="@+id/btnStrength"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="@string/set_stats"></Button>
+                        </TableRow>
+                    </TableRow>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowDexterity">
+
+                    <TextView
+                        android:id="@+id/textDexHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dex_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextDex"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnDexterity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowConstitution">
+
+                    <TextView
+                        android:id="@+id/textConHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/con_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextCon"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnConstitution"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/RightStatTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp">
+
+                <TableRow android:id="@+id/TableRowIntelligence">
+
+                    <TextView
+                        android:id="@+id/textIntHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/int_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextInt"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnIntelligence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowWisdom">
+
+                    <TextView
+                        android:id="@+id/textWisHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/wis_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextWis"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnWisdom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowCharisma">
+
+                    <TextView
+                        android:id="@+id/textCharHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/char_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextChar"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnCharisma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
