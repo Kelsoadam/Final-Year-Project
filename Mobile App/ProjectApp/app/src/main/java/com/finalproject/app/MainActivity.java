@@ -35,6 +35,12 @@ public class MainActivity extends DrawerBaseActivity {
         classAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         classSpinner.setAdapter(classAdapter);
 
+        Spinner alignSpinner = (Spinner) findViewById(R.id.selectAlignment);
+        ArrayAdapter<String> alignAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.alignments));
+        alignAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        alignSpinner.setAdapter(alignAdapter);
+
     }
 
     public void onClick(View v){
