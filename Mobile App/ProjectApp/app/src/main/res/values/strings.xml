@@ -39,9 +39,34 @@
     <string name="sample_AC">12</string>
 
     <string name="rest_head">Rest</string>
-    <string name="level_up">Level Up:</string>
-    <string name="SavingThrow_Header">Saving Throws</string>
     <string name="restBtn_text"><![CDATA[<3]]></string>
+    <string name="level_up">Level Up:</string>
+
+    <string name="SavingThrow_Header">Saving Throws</string>
+
+    <string name="death_save_header">Death Save</string>
+    <string name="roll">Roll</string>
+    <string name="death_success_header">Successes:</string>
+    <string name="death_fail_header">Failed</string>
+    <string name="skillsTable_head">Skills</string>
+    <string name="acro_head">Acrobatics:</string>
+    <string name="Animal_head">Animal Handling</string>
+    <string name="arcana_head">Arcana</string>
+    <string name="ath_head">Athletics</string>
+    <string name="deception_head">Deception</string>
+    <string name="history_head">History</string>
+    <string name="insight_head">Insight</string>
+    <string name="intimidate_head">Intimidation</string>
+    <string name="invest_head">Investigation</string>
+    <string name="medicine_head">Medicine</string>
+    <string name="nature_head">Nature</string>
+    <string name="percept_head">Perception</string>
+    <string name="perform_head">Performance</string>
+    <string name="persuade_head">Persuasion</string>
+    <string name="religion_head">Religion</string>
+    <string name="SoH_head">Sleight of Hand</string>
+    <string name="stealth_head">Stealth</string>
+    <string name="survive_head">Survival</string>
 
     <string-array name="races">
         <item>Select race</item>

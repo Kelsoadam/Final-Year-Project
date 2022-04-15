@@ -328,7 +328,7 @@
     <ScrollView
         android:id="@+id/scrollViewRolls"
         android:layout_width="236dp"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -343,12 +343,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TableLayout android:id="@+id/TableMisc"
+            <TableLayout
+                android:id="@+id/TableMisc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
                 <TableRow
+                    android:id="@+id/TableInitiative"
                     android:layout_width="wrap_content"
                     android:layout_marginTop="10dp">
 
@@ -358,16 +360,18 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/initiative_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnInit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
+
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_marginTop="10dp">
@@ -378,16 +382,18 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/rest_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnRest"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/restBtn_text"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/restBtn_text" />
                     </TableRow>
                 </TableRow>
+
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_marginTop="10dp">
@@ -398,19 +404,21 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/level_up" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnLvlUp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="+"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="+" />
                     </TableRow>
                 </TableRow>
             </TableLayout>
 
-            <TableLayout android:id="@+id/TableSavingThrows"
+            <TableLayout
+                android:id="@+id/TableSavingThrows"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -419,11 +427,9 @@
                 <TextView
                     android:text="@string/SavingThrow_Header"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
-                <TableRow
-                    android:layout_width="wrap_content">
+                <TableRow android:layout_width="wrap_content">
 
                     <TextView
                         android:id="@+id/skillHeadStrength"
@@ -431,18 +437,19 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/strength_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnStrengthT"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content">
+
+                <TableRow android:layout_width="wrap_content">
 
                     <TextView
                         android:id="@+id/skillHeadDex"
@@ -450,18 +457,19 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/dex_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnDexSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content">
+
+                <TableRow android:layout_width="wrap_content">
 
                     <TextView
                         android:id="@+id/skillHeadCon"
@@ -469,18 +477,19 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/con_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnConSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content">
+
+                <TableRow android:layout_width="wrap_content">
 
                     <TextView
                         android:id="@+id/skillHeadInt"
@@ -488,18 +497,19 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/int_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnIntSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content">
+
+                <TableRow android:layout_width="wrap_content">
 
                     <TextView
                         android:id="@+id/skillHeadWisdom"
@@ -507,18 +517,19 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/wis_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnWisdomSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content">
+
+                <TableRow android:layout_width="wrap_content">
 
                     <TextView
                         android:id="@+id/skillHeadChar"
@@ -526,15 +537,439 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="@string/char_head" />
+
                     <TableRow>
+
                         <Button
                             android:id="@+id/btnCharSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/set_stats"
                             android:layout_marginStart="10dp"
-                            />
+                            android:text="@string/set_stats" />
                     </TableRow>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableDeathSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtDeathSaveHeader"
+                    android:text="@string/death_save_header"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/DeathSaveHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/death_save_header"
+                        android:textAlignment="center" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnDeathSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/roll" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/DeathSaveSucceedHead"
+                        android:text="@string/death_success_header" />
+
+                    <TextView
+                        android:id="@+id/Successes"
+                        android:text=""
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/DeathSaveFailHead"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/death_fail_header"
+                        android:textAlignment="center" />
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/fails"
+                            android:text=""
+                            android:textAlignment="center" />
+                    </TableRow>
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableSkills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtSkillsTableHeader"
+                    android:text="@string/skillsTable_head"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadAcrobatics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/acro_head" />
+
+
+                    <Button
+                        android:id="@+id/btnAcrobatics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadAnimal_Handling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/Animal_head" />
+
+
+                    <Button
+                        android:id="@+id/btnAnimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadArcana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/arcana_head" />
+
+
+                    <Button
+                        android:id="@+id/btnArcana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadAthletics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/ath_head" />
+
+
+                    <Button
+                        android:id="@+id/btnAthletics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadDeception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/deception_head" />
+
+
+                    <Button
+                        android:id="@+id/btnDeception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/history_head" />
+
+
+                    <Button
+                        android:id="@+id/btnHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadInsight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/insight_head" />
+
+
+                    <Button
+                        android:id="@+id/btnInsight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadIntimidation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/intimidate_head" />
+
+
+                    <Button
+                        android:id="@+id/btnIntimidation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadInvestigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/invest_head" />
+
+
+                    <Button
+                        android:id="@+id/btnInvestigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadMedicine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/medicine_head" />
+
+
+                    <Button
+                        android:id="@+id/btnMedicine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadNature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/nature_head" />
+
+
+                    <Button
+                        android:id="@+id/btnNature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadPerception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/percept_head" />
+
+
+                    <Button
+                        android:id="@+id/btnPerception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadPerformance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/perform_head" />
+
+
+                    <Button
+                        android:id="@+id/btnPerformance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadPersuasion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/persuade_head" />
+
+
+                    <Button
+                        android:id="@+id/btnPersuasion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadReligion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/religion_head" />
+
+
+                    <Button
+                        android:id="@+id/btnReligion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadSleightOfHand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/SoH_head" />
+
+
+                    <Button
+                        android:id="@+id/btnSoH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadStealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/stealth_head" />
+
+
+                    <Button
+                        android:id="@+id/btnStealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadSurvival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/survive_head" />
+
+
+                    <Button
+                        android:id="@+id/btnSurvival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
                 </TableRow>
             </TableLayout>
 
@@ -590,7 +1025,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:text="@string/set_stats"></Button>
+                                android:text="@string/set_stats" />
                         </TableRow>
                     </TableRow>
 
