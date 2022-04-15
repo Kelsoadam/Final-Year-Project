@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/divider2"
+        android:id="@+id/dividerNavHeader"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
@@ -16,13 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.08"
-        tools:visibility="invisible" />
+        />
 
     <TextView
         android:id="@+id/CharName_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Character Name"
+        android:text="@string/name_head"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextCharacterName"
         app:layout_constraintStart_toStartOf="@+id/editTextCharacterName"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -57,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toEndOf="@+id/editTextCharacterName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/CharClass_Header"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -152,6 +152,141 @@
         app:layout_constraintStart_toEndOf="@+id/CharAlignment_Header"
         app:layout_constraintTop_toTopOf="@+id/CharAlignment_Header"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <View
+        android:id="@+id/dividerStats"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="120dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/dividerHealth"
+        android:layout_width="1dp"
+        android:layout_height="409dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginEnd="238dp"
+        android:layout_marginBottom="139dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ac_head"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <TextView
+        android:id="@+id/textViewInit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initiative_head"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <TextView
+        android:id="@+id/textViewSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speed_head"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <TextView
+        android:id="@+id/textViewCurrHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currentHP_head"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <TextView
+        android:id="@+id/textViewTempHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempHit_head"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="422dp" />
+
+    <TextView
+        android:id="@+id/textStrHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strength_head"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/textDexHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dex_head"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/textConHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/con_head"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/textIntHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/int_head"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/textWisHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wis_head"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/textCharHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/char_head"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="673dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="236dp"
+        android:layout_height="444dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/dividerStats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dividerHealth"
+        app:layout_constraintTop_toBottomOf="@+id/selectAlignment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

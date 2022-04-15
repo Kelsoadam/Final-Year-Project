@@ -11,10 +11,24 @@
     <string name="sample_name">James</string>
     <string name="sample_level">1</string>
 
+    <string name="name_head">Character Name:</string>
     <string name="class_head">Class:</string>
     <string name="level_head">Level:</string>
     <string name="race_head">Race:</string>
     <string name="align_head">Alignment:</string>
+
+    <string name="ac_head">Armour Class:</string>
+    <string name="initiative_head">Initiative:</string>
+    <string name="speed_head">Speed:</string>
+    <string name="currentHP_head">Current Hit Points:</string>
+    <string name="tempHit_head">Temporary Hit Points:</string>
+
+    <string name="strength_head">Strength:</string>
+    <string name="dex_head">Dexterity:</string>
+    <string name="con_head">Constitution:</string>
+    <string name="int_head">Intelligence:</string>
+    <string name="wis_head">Wisdom:</string>
+    <string name="char_head">Charisma:</string>
 
     <string-array name="races">
         <item>Select race</item>
