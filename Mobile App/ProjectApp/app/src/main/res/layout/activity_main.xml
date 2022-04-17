@@ -378,6 +378,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -400,6 +401,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/restBtn_text" />
                     </TableRow>
                 </TableRow>
@@ -422,6 +424,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="+" />
                     </TableRow>
                 </TableRow>
@@ -455,6 +458,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -475,6 +479,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -495,6 +500,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -515,6 +521,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -535,6 +542,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -555,6 +563,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>
@@ -591,6 +600,7 @@
                             android:id="@+id/btnDeathSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="onClick"
                             android:layout_marginStart="10dp"
                             android:text="@string/roll" />
                     </TableRow>
@@ -655,6 +665,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -674,6 +685,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -693,6 +705,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -711,6 +724,7 @@
                         android:id="@+id/btnAthletics"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onClick"
                         android:layout_marginStart="10dp"
                         android:text="@string/set_stats" />
 
@@ -730,6 +744,7 @@
                         android:id="@+id/btnDeception"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onClick"
                         android:layout_marginStart="10dp"
                         android:text="@string/set_stats" />
 
@@ -749,6 +764,7 @@
                         android:id="@+id/btnHistory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onClick"
                         android:layout_marginStart="10dp"
                         android:text="@string/set_stats" />
 
@@ -768,6 +784,7 @@
                         android:id="@+id/btnInsight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onClick"
                         android:layout_marginStart="10dp"
                         android:text="@string/set_stats" />
 
@@ -787,6 +804,7 @@
                         android:id="@+id/btnIntimidation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onClick"
                         android:layout_marginStart="10dp"
                         android:text="@string/set_stats" />
 
@@ -807,6 +825,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -826,6 +845,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -845,6 +865,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -864,6 +885,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -883,6 +905,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -902,6 +925,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -920,6 +944,7 @@
                         android:id="@+id/btnReligion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="onClick"
                         android:layout_marginStart="10dp"
                         android:text="@string/set_stats" />
 
@@ -940,6 +965,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -959,6 +985,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
@@ -978,11 +1005,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:onClick="onClick"
                         android:text="@string/set_stats" />
 
                 </TableRow>
             </TableLayout>
-
 
         </LinearLayout>
     </ScrollView>
@@ -1033,6 +1060,7 @@
                             <Button
                                 android:id="@+id/btnStrength"
                                 android:layout_width="wrap_content"
+                                android:onClick="onClick"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
                                 android:text="@string/set_stats" />
@@ -1067,6 +1095,7 @@
                             android:id="@+id/btnDexterity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="onClick"
                             android:layout_marginStart="20dp"
                             android:text="@string/set_stats" />
                     </TableRow>
@@ -1096,6 +1125,7 @@
 
                         <Button
                             android:id="@+id/btnConstitution"
+                            android:onClick="onClick"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
@@ -1136,6 +1166,7 @@
                             android:id="@+id/btnIntelligence"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="onClick"
                             android:layout_marginStart="20dp"
                             android:text="@string/set_stats" />
                     </TableRow>
@@ -1165,6 +1196,7 @@
 
                         <Button
                             android:id="@+id/btnWisdom"
+                            android:onClick="onClick"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
@@ -1199,6 +1231,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
+                            android:onClick="onClick"
                             android:text="@string/set_stats" />
                     </TableRow>
                 </TableRow>

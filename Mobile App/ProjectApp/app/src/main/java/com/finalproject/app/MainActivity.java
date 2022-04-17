@@ -1,6 +1,7 @@
 package com.finalproject.app;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -67,6 +68,24 @@ public class MainActivity extends DrawerBaseActivity {
     TextView dsFails;
 
     // Declaring buttons for skill checks
+    Button acrobaticsCheck;
+    Button animal_handlingCheck;
+    Button arcanaCheck;
+    Button athleticsCheck;
+    Button deceptionCheck;
+    Button historyCheck;
+    Button insightCheck;
+    Button intimidationCheck;
+    Button investigationCheck;
+    Button medicineCheck;
+    Button natureCheck;
+    Button perceptionCheck;
+    Button performanceCheck;
+    Button persuasionCheck;
+    Button religionCheck;
+    Button sleight_of_handCheck;
+    Button stealthCheck;
+    Button survivalCheck;
 
     // Declaring buttons for stat checks
     Button strCheck;
@@ -75,6 +94,12 @@ public class MainActivity extends DrawerBaseActivity {
     Button intCheck;
     Button wisCheck;
     Button charCheck;
+
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private TextView diceRoll, mod;
+    String rollName;
+    Button close;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,11 +159,125 @@ public class MainActivity extends DrawerBaseActivity {
         savingWis = findViewById(R.id.btnWisSave);
         savingChar = findViewById(R.id.btnCharSave);
 
+        acrobaticsCheck = findViewById(R.id.btnAcrobatics);
+        animal_handlingCheck = findViewById(R.id.btnAnimal);
+        arcanaCheck = findViewById(R.id.btnArcana);
+        athleticsCheck = findViewById(R.id.btnAthletics);
+        deceptionCheck = findViewById(R.id.btnDeception);
+        historyCheck = findViewById(R.id.btnHistory);
+        insightCheck = findViewById(R.id.btnInsight);
+        intimidationCheck = findViewById(R.id.btnIntimidation);
+        investigationCheck = findViewById(R.id.btnInvestigation);
+        medicineCheck = findViewById(R.id.btnMedicine);
+        natureCheck = findViewById(R.id.btnNature);
+        perceptionCheck = findViewById(R.id.btnPerception);
+        performanceCheck = findViewById(R.id.btnPerformance);
+        persuasionCheck = findViewById(R.id.btnPersuasion);
+        religionCheck = findViewById(R.id.btnReligion);
+        sleight_of_handCheck = findViewById(R.id.btnSoH);
+        stealthCheck = findViewById(R.id.btnStealth);
+        survivalCheck = findViewById(R.id.btnSurvival);
+
+
         content();
     }
 
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnStrSave:
+                rollName = "Strength Save:";
+                createRollDialog(rollName, strMod);
+            case R.id.btnStrength:
+                rollName = "Strength Check:";
+                createRollDialog(rollName, strMod);
+            case R.id.btnAthletics:
+                rollName = "Athletics Check:";
+                createRollDialog(rollName, strMod);
+                break;
 
+            case R.id.btnInit:
+                rollName = "Initiative:";
+                createRollDialog(rollName, dexMod);
+            case R.id.btnDexSave:
+                rollName = "Dexterity Save:";
+                createRollDialog(rollName, dexMod);
+            case R.id.btnDexterity:
+                rollName = "Dexterity:";
+                createRollDialog(rollName, dexMod);
+            case R.id.btnAcrobatics:
+                rollName = "Acrobatics Check:";
+                createRollDialog(rollName, dexMod);
+            case R.id.btnSoH:
+                rollName = "Sleight of Hand Check:";
+                createRollDialog(rollName, dexMod);
+            case R.id.btnStealth:
+                rollName = "Stealth Check:";
+                createRollDialog(rollName, dexMod);
+                break;
+
+            case R.id.btnConSave:
+                rollName = "Constitution Save:";
+                createRollDialog(rollName, conMod);
+            case R.id.btnConstitution:
+                rollName = "Constitution Check:";
+                createRollDialog(rollName, conMod);
+                break;
+
+            case R.id.btnIntSave:
+                rollName = "Intelligence Save:";
+                createRollDialog(rollName, intMod);
+            case R.id.btnIntelligence:
+                rollName = "Intelligence Check:";
+                createRollDialog(rollName, intMod);
+            case R.id.btnArcana:
+                rollName = "Arcana Check:";
+                createRollDialog(rollName, intMod);
+            case R.id.btnHistory:
+                rollName = "History Check:";
+                createRollDialog(rollName, intMod);
+            case R.id.btnInvestigation:
+                rollName = "Investigation Check:";
+                createRollDialog(rollName, intMod);
+            case R.id.btnNature:
+                rollName = "Nature Check:";
+                createRollDialog(rollName, intMod);
+            case R.id.btnReligion:
+                rollName = "Religion Check:";
+                createRollDialog(rollName, intMod);
+                break;
+
+            case R.id.btnWisSave:
+                rollName = "Wisdom Save:";
+                createRollDialog(rollName, wisMod);
+            case R.id.btnWisdom:
+                rollName = "Wisdom Check:";
+                createRollDialog(rollName, wisMod);
+            case R.id.btnAnimal:
+                rollName = "Animal Handling Check:";
+                createRollDialog(rollName, wisMod);
+            case R.id.btnInsight:
+                rollName = "Insight Check:";
+                createRollDialog(rollName, wisMod);
+            case R.id.btnMedicine:
+                rollName = "Medicine Check:";
+                createRollDialog(rollName, wisMod);
+            case R.id.btnPerception:
+                rollName = "Perception Check:";
+                createRollDialog(rollName, wisMod);
+            case R.id.btnSurvival:
+                rollName = "Survival Check:";
+                createRollDialog(rollName, wisMod);
+                break;
+
+            case R.id.btnCharSave:
+            case R.id.btnCharisma:
+            case R.id.btnDeception:
+            case R.id.btnIntimidation:
+            case R.id.btnPerformance:
+            case R.id.btnPersuasion:
+                createRollDialog(charMod);
+                break;
+        }
     }
 
     public void content() {
@@ -153,16 +292,17 @@ public class MainActivity extends DrawerBaseActivity {
                 !wisInput.getText().toString().equals("") &&
                 !charInput.getText().toString().equals("")) {
 
-            resetMods();
-            setSpeed();
-            setButtons();
+            resetMods(); // Calls method that updates modifiers
+            setSpeed(); // Calls method that sets speed based on chosen race
+            setButtons(); // Calls method that sets the .text value of buttons to corresponding mod
 
         }
         refresh(2000);
         // Calls the refresh method to refresh our front end modifiers after x milliseconds
     }
 
-    public void resetMods(){
+    @SuppressLint("SetTextI18n")
+    public void resetMods() {
         // This method sets stat modifiers to equal the inputted stat value (-10), halved then rounded down
         // i.e. Strength = 16, so 16 - 10 = 6, / 2 = 3; which is the correct modifier
 
@@ -198,7 +338,7 @@ public class MainActivity extends DrawerBaseActivity {
         charMod = (int) Math.floor(modCalc);
     }
 
-    public void setSpeed(){
+    public void setSpeed() {
         // Sets the speed value on the sheet to be equal to
         // the speed associated with the selected race
 
@@ -261,10 +401,13 @@ public class MainActivity extends DrawerBaseActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void setButtons(){
+    public void setButtons() {
 
         rollInitiative.setText(Integer.toString(dexMod)); // Sets Initiative button to equal our mod
 
+        // -------------------------------------------
+        // Stat Check and Saving Throw Buttons
+        // -------------------------------------------
         strCheck.setText(Integer.toString(strMod));
         savingStr.setText(Integer.toString(strMod));
 
@@ -282,7 +425,64 @@ public class MainActivity extends DrawerBaseActivity {
 
         charCheck.setText(Integer.toString(charMod));
         savingChar.setText(Integer.toString(charMod));
+        // ---------------------------------------------------
+        // Skill Check Buttons
+        // ---------------------------------------------------
+        // Strength
+        athleticsCheck.setText(Integer.toString(strMod));
 
+        // Dexterity
+        acrobaticsCheck.setText(Integer.toString(dexMod));
+        sleight_of_handCheck.setText(Integer.toString(dexMod));
+        stealthCheck.setText(Integer.toString(dexMod));
+
+        // Intelligence
+        arcanaCheck.setText(Integer.toString(intMod));
+        historyCheck.setText(Integer.toString(intMod));
+        investigationCheck.setText(Integer.toString(intMod));
+        natureCheck.setText(Integer.toString(intMod));
+        religionCheck.setText(Integer.toString(intMod));
+
+        // Wisdom
+        animal_handlingCheck.setText(Integer.toString(wisMod));
+        insightCheck.setText(Integer.toString(wisMod));
+        medicineCheck.setText(Integer.toString(wisMod));
+        perceptionCheck.setText(Integer.toString(wisMod));
+        survivalCheck.setText(Integer.toString(wisMod));
+
+        // Charisma
+        deceptionCheck.setText(Integer.toString(charMod));
+        intimidationCheck.setText(Integer.toString(charMod));
+        performanceCheck.setText(Integer.toString(charMod));
+        persuasionCheck.setText(Integer.toString(charMod));
+
+        // ------------------------------------------
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void createRollDialog(String rollName, int mod) {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View diceRollPopup = getLayoutInflater().inflate(R.layout.popup, null);
+
+        diceRoll = (TextView) diceRollPopup.findViewById(R.id.rollResult);
+        close = (Button) diceRollPopup.findViewById(R.id.closeButton);
+
+        int diceResult = DiceRolls.D20();
+        diceRoll.setText(rollName + " (" + Integer.toString(diceResult) + ") + " +
+                Integer.toString(mod) + " = " + (diceResult + mod));
+
+        dialogBuilder.setView(diceRollPopup);
+        dialog = dialogBuilder.create();
+        dialog.show();
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Closes dialog window
+                dialog.dismiss();
+            }
+        });
     }
 
     private void refresh(int milliseconds) {
