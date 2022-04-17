@@ -187,9 +187,11 @@ public class MainActivity extends DrawerBaseActivity {
             case R.id.btnStrSave:
                 rollName = "Strength Save:";
                 createRollDialog(rollName, strMod);
+                break;
             case R.id.btnStrength:
                 rollName = "Strength Check:";
                 createRollDialog(rollName, strMod);
+                break;
             case R.id.btnAthletics:
                 rollName = "Athletics Check:";
                 createRollDialog(rollName, strMod);
@@ -198,18 +200,23 @@ public class MainActivity extends DrawerBaseActivity {
             case R.id.btnInit:
                 rollName = "Initiative:";
                 createRollDialog(rollName, dexMod);
+                break;
             case R.id.btnDexSave:
                 rollName = "Dexterity Save:";
                 createRollDialog(rollName, dexMod);
+                break;
             case R.id.btnDexterity:
                 rollName = "Dexterity:";
                 createRollDialog(rollName, dexMod);
+                break;
             case R.id.btnAcrobatics:
                 rollName = "Acrobatics Check:";
                 createRollDialog(rollName, dexMod);
+                break;
             case R.id.btnSoH:
                 rollName = "Sleight of Hand Check:";
                 createRollDialog(rollName, dexMod);
+                break;
             case R.id.btnStealth:
                 rollName = "Stealth Check:";
                 createRollDialog(rollName, dexMod);
@@ -218,6 +225,7 @@ public class MainActivity extends DrawerBaseActivity {
             case R.id.btnConSave:
                 rollName = "Constitution Save:";
                 createRollDialog(rollName, conMod);
+                break;
             case R.id.btnConstitution:
                 rollName = "Constitution Check:";
                 createRollDialog(rollName, conMod);
@@ -226,21 +234,27 @@ public class MainActivity extends DrawerBaseActivity {
             case R.id.btnIntSave:
                 rollName = "Intelligence Save:";
                 createRollDialog(rollName, intMod);
+                break;
             case R.id.btnIntelligence:
                 rollName = "Intelligence Check:";
                 createRollDialog(rollName, intMod);
+                break;
             case R.id.btnArcana:
                 rollName = "Arcana Check:";
                 createRollDialog(rollName, intMod);
+                break;
             case R.id.btnHistory:
                 rollName = "History Check:";
                 createRollDialog(rollName, intMod);
+                break;
             case R.id.btnInvestigation:
                 rollName = "Investigation Check:";
                 createRollDialog(rollName, intMod);
+                break;
             case R.id.btnNature:
                 rollName = "Nature Check:";
                 createRollDialog(rollName, intMod);
+                break;
             case R.id.btnReligion:
                 rollName = "Religion Check:";
                 createRollDialog(rollName, intMod);
@@ -249,33 +263,55 @@ public class MainActivity extends DrawerBaseActivity {
             case R.id.btnWisSave:
                 rollName = "Wisdom Save:";
                 createRollDialog(rollName, wisMod);
+                break;
             case R.id.btnWisdom:
                 rollName = "Wisdom Check:";
                 createRollDialog(rollName, wisMod);
+                break;
             case R.id.btnAnimal:
                 rollName = "Animal Handling Check:";
                 createRollDialog(rollName, wisMod);
+                break;
             case R.id.btnInsight:
                 rollName = "Insight Check:";
                 createRollDialog(rollName, wisMod);
+                break;
             case R.id.btnMedicine:
                 rollName = "Medicine Check:";
                 createRollDialog(rollName, wisMod);
+                break;
             case R.id.btnPerception:
                 rollName = "Perception Check:";
                 createRollDialog(rollName, wisMod);
+                break;
             case R.id.btnSurvival:
                 rollName = "Survival Check:";
                 createRollDialog(rollName, wisMod);
                 break;
 
             case R.id.btnCharSave:
+                rollName = "Charisma Save:";
+                createRollDialog(rollName, charMod);
+                break;
             case R.id.btnCharisma:
+                rollName = "Charisma Check:";
+                createRollDialog(rollName, charMod);
+                break;
             case R.id.btnDeception:
+                rollName = "Deception Check:";
+                createRollDialog(rollName, charMod);
+                break;
             case R.id.btnIntimidation:
+                rollName = "Intimidation Check:";
+                createRollDialog(rollName, charMod);
+                break;
             case R.id.btnPerformance:
+                rollName = "Performance Check:";
+                createRollDialog(rollName, charMod);
+                break;
             case R.id.btnPersuasion:
-                createRollDialog(charMod);
+                rollName = "Persuasion Check:";
+                createRollDialog(rollName, charMod);
                 break;
         }
     }
@@ -469,7 +505,7 @@ public class MainActivity extends DrawerBaseActivity {
         close = (Button) diceRollPopup.findViewById(R.id.closeButton);
 
         int diceResult = DiceRolls.D20();
-        diceRoll.setText(rollName + " (" + Integer.toString(diceResult) + ") + " +
+        diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ") + " +
                 Integer.toString(mod) + " = " + (diceResult + mod));
 
         dialogBuilder.setView(diceRollPopup);

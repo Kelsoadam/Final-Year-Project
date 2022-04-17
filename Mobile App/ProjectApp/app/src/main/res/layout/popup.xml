@@ -25,6 +25,7 @@
         app:layout_editor_absoluteX="28dp"
         android:textSize="50sp"
         android:text="Roll Result:"
+        android:textStyle="italic"
         android:textAlignment="center"
         />
 
