@@ -136,16 +136,6 @@ public class MainActivity extends DrawerBaseActivity {
             charMod = (int) Math.floor(modCalc);
 
             selectedRace = String.valueOf(raceSpinner.getSelectedItem().toString());
-
-
-//            if (selectedRace.equals("Orc")){
-//                speed.setText(R.string.speed_Thirty);
-//            }
-//            else if(selectedRace.equals("")){
-//                speed.setText(R.string.speed_switchTest);
-//            }
-
-
             switch (selectedRace) {
                 case "Dwarf":
                 case "Gnome":
@@ -154,19 +144,36 @@ public class MainActivity extends DrawerBaseActivity {
                     break;
 
                 case "Aasimar":
-                case "Bugbear":
-                case "Changeling":
-                case "Dragonborn":
-                    case "Elf"
-
-
-
-
-
-
-                    case "Yuan-ti Pureblood":
+                    case "Bugbear":
+                    case "Changeling":
+                    case "Dragonborn":
+                    case "Elf":
+                    case "Firbolg":
+                    case "Genasi":
+                    case "Gith":
+                    case "Goblin":
+                    case "Goliath":
+                    case "Half-Elf":
+                    case "Half-Orc":
+                    case "Hobgobin":
+                    case "Human":
+                    case "Kalashtar":
+                    case "Kenku":
+                    case "Kobold":
+                    case "Loxodon":
+                    case "Minotaur":
+                    case "Orc":
+                    case "Shifter":
+                    case "Simic Hybrid":
+                    case "Tabaxi":
+                    case "Tiefling":
+                    case "Tortle":
+                    case "Vedalken":
+                    case "Warforged":
+                case "Yuan-ti Pureblood":
                     speed.setText(R.string.speed_Thirty);
                     break;
+
                 case "Centaur":
                     speed.setText(R.string.speed_forty);
                     break;
