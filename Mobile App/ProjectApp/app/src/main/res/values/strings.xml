@@ -78,6 +78,8 @@
     <string name="speed_SelectRace">Select Race</string>
     <string name="speed_switchTest">Race is not being read</string>
 
+    <string name="plus_symbol">+</string>
+
     <string-array name="races">
         <item>Select race</item>
         <item>Aarakocra</item>

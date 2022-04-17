@@ -451,7 +451,7 @@
                     <TableRow>
 
                         <Button
-                            android:id="@+id/btnStrengthT"
+                            android:id="@+id/btnStrSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -531,7 +531,7 @@
                     <TableRow>
 
                         <Button
-                            android:id="@+id/btnWisdomSave"
+                            android:id="@+id/btnWisSave"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
