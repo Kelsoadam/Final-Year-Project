@@ -102,101 +102,111 @@ public class MainActivity extends DrawerBaseActivity {
                 !conInput.getText().toString().equals("") &&
                 !wisInput.getText().toString().equals("") &&
                 !charInput.getText().toString().equals("")) {
-            // Sets stat modifiers to equal the inputted stat value (-10), halved then rounded down
-            // i.e. Strength = 16, so 16 - 10 = 6, / 2 = 3; which is the correct modifier
-            getSTR = strInput.getText().toString();
-            modCalc = (Double.parseDouble(getSTR) - 10) / 2;
-            strMod = (int) Math.floor(modCalc);
 
-            getDEX = dexInput.getText().toString();
-            modCalc = (Double.parseDouble(getDEX) - 10) / 2;
-            dexMod = (int) Math.floor(modCalc);
+            resetMods();
+            setSpeed();
 
-            TextView initiative = (TextView) findViewById(R.id.textInit_score);
-            initiative.setText(Integer.toString(dexMod));
-
-
-            String getCON = conInput.getText().toString();
-            modCalc = (Double.parseDouble(getCON) - 10) / 2;
-            conMod = (int) Math.floor(modCalc);
-
-
-            String getINT = intInput.getText().toString();
-            modCalc = (Double.parseDouble(getINT) - 10) / 2;
-            intMod = (int) Math.floor(modCalc);
-
-
-            String getWIS = wisInput.getText().toString();
-            modCalc = (Double.parseDouble(getWIS) - 10) / 2;
-            wisMod = (int) Math.floor(modCalc);
-
-
-            String getCHAR = charInput.getText().toString();
-            modCalc = (Double.parseDouble(getCHAR) - 10) / 2;
-            charMod = (int) Math.floor(modCalc);
-
-            selectedRace = String.valueOf(raceSpinner.getSelectedItem().toString());
-            switch (selectedRace) {
-                case "Dwarf":
-                case "Gnome":
-                case "Halfling":
-                    speed.setText(R.string.speed_TwentyFive);
-                    break;
-
-                case "Aasimar":
-                    case "Bugbear":
-                    case "Changeling":
-                    case "Dragonborn":
-                    case "Elf":
-                    case "Firbolg":
-                    case "Genasi":
-                    case "Gith":
-                    case "Goblin":
-                    case "Goliath":
-                    case "Half-Elf":
-                    case "Half-Orc":
-                    case "Hobgobin":
-                    case "Human":
-                    case "Kalashtar":
-                    case "Kenku":
-                    case "Kobold":
-                    case "Loxodon":
-                    case "Minotaur":
-                    case "Orc":
-                    case "Shifter":
-                    case "Simic Hybrid":
-                    case "Tabaxi":
-                    case "Tiefling":
-                    case "Tortle":
-                    case "Vedalken":
-                    case "Warforged":
-                case "Yuan-ti Pureblood":
-                    speed.setText(R.string.speed_Thirty);
-                    break;
-
-                case "Centaur":
-                    speed.setText(R.string.speed_forty);
-                    break;
-
-                case "Aarakocra":
-                    speed.setText(R.string.speed_Aarakocra);
-                    break;
-
-                case "Lizardfolk":
-                case "Triton":
-                    speed.setText(R.string.speed_LizardTriton);
-                    break;
-
-                case "Grung":
-                    speed.setText(R.string.speed_Grung);
-                    break;
-            }
         }
-
-
         refresh(2000);
     }
 
+    public void resetMods(){
+        // Sets stat modifiers to equal the inputted stat value (-10), halved then rounded down
+        // i.e. Strength = 16, so 16 - 10 = 6, / 2 = 3; which is the correct modifier
+
+        getSTR = strInput.getText().toString();
+        modCalc = (Double.parseDouble(getSTR) - 10) / 2;
+        strMod = (int) Math.floor(modCalc);
+
+        getDEX = dexInput.getText().toString();
+        modCalc = (Double.parseDouble(getDEX) - 10) / 2;
+        dexMod = (int) Math.floor(modCalc);
+
+        TextView initiative = (TextView) findViewById(R.id.textInit_score);
+        initiative.setText(Integer.toString(dexMod));
+
+
+        String getCON = conInput.getText().toString();
+        modCalc = (Double.parseDouble(getCON) - 10) / 2;
+        conMod = (int) Math.floor(modCalc);
+
+
+        String getINT = intInput.getText().toString();
+        modCalc = (Double.parseDouble(getINT) - 10) / 2;
+        intMod = (int) Math.floor(modCalc);
+
+
+        String getWIS = wisInput.getText().toString();
+        modCalc = (Double.parseDouble(getWIS) - 10) / 2;
+        wisMod = (int) Math.floor(modCalc);
+
+
+        String getCHAR = charInput.getText().toString();
+        modCalc = (Double.parseDouble(getCHAR) - 10) / 2;
+        charMod = (int) Math.floor(modCalc);
+    }
+
+    public void setSpeed(){
+        // Sets the speed value on the sheet to be equal to
+        // the speed associated with the selected race
+
+        selectedRace = String.valueOf(raceSpinner.getSelectedItem().toString());
+        switch (selectedRace) {
+            case "Dwarf":
+            case "Gnome":
+            case "Halfling":
+                speed.setText(R.string.speed_TwentyFive);
+                break;
+
+            case "Aasimar":
+            case "Bugbear":
+            case "Changeling":
+            case "Dragonborn":
+            case "Elf":
+            case "Firbolg":
+            case "Genasi":
+            case "Gith":
+            case "Goblin":
+            case "Goliath":
+            case "Half-Elf":
+            case "Half-Orc":
+            case "Hobgobin":
+            case "Human":
+            case "Kalashtar":
+            case "Kenku":
+            case "Kobold":
+            case "Loxodon":
+            case "Minotaur":
+            case "Orc":
+            case "Shifter":
+            case "Simic Hybrid":
+            case "Tabaxi":
+            case "Tiefling":
+            case "Tortle":
+            case "Vedalken":
+            case "Warforged":
+            case "Yuan-ti Pureblood":
+                speed.setText(R.string.speed_Thirty);
+                break;
+
+            case "Centaur":
+                speed.setText(R.string.speed_forty);
+                break;
+
+            case "Aarakocra":
+                speed.setText(R.string.speed_Aarakocra);
+                break;
+
+            case "Lizardfolk":
+            case "Triton":
+                speed.setText(R.string.speed_LizardTriton);
+                break;
+
+            case "Grung":
+                speed.setText(R.string.speed_Grung);
+                break;
+        }
+    }
 
     private void refresh(int milliseconds) {
 
