@@ -69,6 +69,15 @@
     <string name="stealth_head">Stealth</string>
     <string name="survive_head">Survival</string>
 
+    <string name="speed_TwentyFive">25ft</string>
+    <string name="speed_Thirty">30ft</string>
+    <string name="speed_forty">40ft</string>
+    <string name="speed_Aarakocra">25ft + 50ft Flying</string>
+    <string name="speed_Grung">25ft + 25ft Climb</string>
+    <string name="speed_LizardTriton">30ft + 30ft Swim</string>
+    <string name="speed_SelectRace">Select Race</string>
+    <string name="speed_switchTest">Race is not being read</string>
+
     <string-array name="races">
         <item>Select race</item>
         <item>Aarakocra</item>
