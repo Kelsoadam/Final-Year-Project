@@ -66,6 +66,8 @@ public class MainActivity extends DrawerBaseActivity {
     Button rollDeathSave;
     TextView dsSuccesses;
     TextView dsFails;
+    int fails = 0;
+    int successes = 0;
 
     // Declaring buttons for skill checks
     Button acrobaticsCheck;
@@ -100,6 +102,8 @@ public class MainActivity extends DrawerBaseActivity {
     private TextView diceRoll, mod;
     String rollName;
     Button close;
+
+    int diceResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,6 +162,9 @@ public class MainActivity extends DrawerBaseActivity {
         savingInt = findViewById(R.id.btnIntSave);
         savingWis = findViewById(R.id.btnWisSave);
         savingChar = findViewById(R.id.btnCharSave);
+
+        dsSuccesses = findViewById(R.id.Successes);
+        dsFails = findViewById(R.id.fails);
 
         acrobaticsCheck = findViewById(R.id.btnAcrobatics);
         animal_handlingCheck = findViewById(R.id.btnAnimal);
@@ -313,6 +320,26 @@ public class MainActivity extends DrawerBaseActivity {
                 rollName = "Persuasion Check:";
                 createRollDialog(rollName, charMod);
                 break;
+
+            case R.id.btnDeathSave:
+                deathSave();
+                if(successes >= 3){
+                    dsSuccesses.setText("You get back up!");
+                    dsFails.setText("");
+                    fails = 0; successes = 0;
+                }
+                else if(fails >= 3){
+                    dsFails.setText("You are dead...");
+                    dsSuccesses.setText("");
+                    fails = 0; successes = 0;
+                }
+                break;
+            case R.id.btnDeathReset:
+                fails = 0;
+                successes = 0;
+                dsSuccesses.setText("");
+                dsFails.setText("");
+                break;
         }
     }
 
@@ -331,6 +358,7 @@ public class MainActivity extends DrawerBaseActivity {
             resetMods(); // Calls method that updates modifiers
             setSpeed(); // Calls method that sets speed based on chosen race
             setButtons(); // Calls method that sets the .text value of buttons to corresponding mod
+
 
         }
         refresh(2000);
@@ -496,6 +524,12 @@ public class MainActivity extends DrawerBaseActivity {
 
     }
 
+    public void deathSave() {
+        diceResult = DiceRolls.D20();
+        rollName = "Death Save:";
+        createRollDialog(rollName, diceResult);
+    }
+
     @SuppressLint("SetTextI18n")
     public void createRollDialog(String rollName, int mod) {
         dialogBuilder = new AlertDialog.Builder(this);
@@ -504,9 +538,30 @@ public class MainActivity extends DrawerBaseActivity {
         diceRoll = (TextView) diceRollPopup.findViewById(R.id.rollResult);
         close = (Button) diceRollPopup.findViewById(R.id.closeButton);
 
-        int diceResult = DiceRolls.D20();
-        diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ") + " +
-                Integer.toString(mod) + " = " + (diceResult + mod));
+        if (rollName.equals("Death Save:")) {
+            if (diceResult == 20) {
+                diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ")" + "\nCritical Success");
+                successes += 2;
+                dsSuccesses.setText(Integer.toString(successes));
+            } else if (diceResult >= 10) {
+                diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ")" + "\nSuccess");
+                successes++;
+                dsSuccesses.setText(Integer.toString(successes));
+            } else if (diceResult == 1) {
+                diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ")" + "\nCritical Fail");
+                fails += 2;
+                dsFails.setText(Integer.toString(fails));
+            } else {
+                diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ")" + "\nFail");
+                fails++;
+                dsFails.setText(Integer.toString(fails));
+            }
+        } else {
+            diceResult = DiceRolls.D20();
+            diceRoll.setText(rollName + "\n(" + Integer.toString(diceResult) + ") + " +
+                    Integer.toString(mod) + " = " + (diceResult + mod));
+        }
+
 
         dialogBuilder.setView(diceRollPopup);
         dialog = dialogBuilder.create();

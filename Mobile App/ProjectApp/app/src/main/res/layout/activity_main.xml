@@ -601,8 +601,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="onClick"
+                            android:textSize="10sp"
                             android:layout_marginStart="10dp"
                             android:text="@string/roll" />
+                        <Button
+                            android:id="@+id/btnDeathReset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:onClick="onClick"
+                            android:text="Reset"
+                            />
                     </TableRow>
                 </TableRow>
 
