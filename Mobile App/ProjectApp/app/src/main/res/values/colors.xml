@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_red">#A30000</color>
+    <color name="platinum">#E5E4E2</color>
+    <color name="gray">#808080</color>
+    <color name="silver">#c0c0c0</color>
 </resources>

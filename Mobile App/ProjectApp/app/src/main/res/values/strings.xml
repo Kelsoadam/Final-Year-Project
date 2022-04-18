@@ -79,6 +79,13 @@
     <string name="speed_switchTest">Race is not being read</string>
 
     <string name="plus_symbol">+</string>
+    <string name="string_Dashboard_Welcome">
+        <![CDATA[Welcome to the dashboard area of my final year
+    project mobile application. Within this application you will have access to; a dice rolling page
+     in the which the you can roll the 7 die used when playing Dungeons & Dragons aswell as a character
+     sheet page in which you can set your characters stats, and roll the corresponding dice at the touch
+     of the screen! \n\n You may navigate the application through the use of the navigation panel
+found on the left of the screen at anytime.]]></string>
 
     <string-array name="races">
         <item>Select race</item>
