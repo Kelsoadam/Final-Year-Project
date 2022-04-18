@@ -63,7 +63,6 @@ public class MainActivity extends DrawerBaseActivity {
     Button savingChar;
 
     // Declaring buttons and TextViews for death saves;
-    Button rollDeathSave;
     TextView dsSuccesses;
     TextView dsFails;
     int fails = 0;
@@ -97,13 +96,19 @@ public class MainActivity extends DrawerBaseActivity {
     Button wisCheck;
     Button charCheck;
 
+    // Declaration of variables for popup window
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private TextView diceRoll, mod;
     String rollName;
     Button close;
-
     int diceResult;
+
+    EditText editLevel;
+    int characterLevel = 1;
+
+    EditText currHealth;
+    EditText maxHealth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -185,6 +190,10 @@ public class MainActivity extends DrawerBaseActivity {
         stealthCheck = findViewById(R.id.btnStealth);
         survivalCheck = findViewById(R.id.btnSurvival);
 
+        editLevel = findViewById(R.id.editTextCharLevel);
+
+        currHealth = findViewById(R.id.editTextCurrHP);
+        maxHealth = findViewById(R.id.editTextMaxHP);
 
         content();
     }
@@ -339,6 +348,12 @@ public class MainActivity extends DrawerBaseActivity {
                 successes = 0;
                 dsSuccesses.setText("");
                 dsFails.setText("");
+                break;
+            case R.id.btnRest:
+                rest();
+                break;
+            case R.id.btnLvlUp:
+                levelUp();
                 break;
         }
     }
@@ -528,6 +543,16 @@ public class MainActivity extends DrawerBaseActivity {
         diceResult = DiceRolls.D20();
         rollName = "Death Save:";
         createRollDialog(rollName, diceResult);
+    }
+
+    public void levelUp(){
+        characterLevel ++;
+        editLevel.setText(Integer.toString(characterLevel));
+    }
+
+    public void rest(){
+        String getMaxHealth = maxHealth.getText().toString();
+        currHealth.setText(getMaxHealth);
     }
 
     @SuppressLint("SetTextI18n")
