@@ -11,3 +11,11 @@
 
 
 ## Recent Patch notes
+
+### V1.3
+
+#### Added Features
+
+- Character sheet
+- Sheet rolls show on popup window
+  - Breakdown of roll shown
