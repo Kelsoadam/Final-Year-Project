@@ -1,5 +1,167 @@
 <resources>
     <string name="app_name">Interactive Character Sheet</string>
+
     <string name="menu_drawer_open">Drawer Open</string>
     <string name="menu_drawer_close">Drawer Close</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_roller">Dice Roller</string>
+    <string name="nav_sheet">Character Sheet</string>
+
+    <string name="sample_name">James</string>
+    <string name="sample_level">1</string>
+
+    <string name="name_head">Character Name:</string>
+    <string name="class_head">Class:</string>
+    <string name="level_head">Level:</string>
+    <string name="race_head">Race:</string>
+    <string name="align_head">Alignment:</string>
+
+    <string name="ac_head">Armour Class:</string>
+    <string name="initiative_head">Initiative:</string>
+    <string name="speed_head">Speed:</string>
+    <string name="currentHP_head">Current Hit Points:</string>
+    <string name="tempHit_head">Temporary Hit Points:</string>
+    <string name="maxHP_head">Max Hit Points:</string>
+
+    <string name="strength_head">Strength:</string>
+    <string name="dex_head">Dexterity:</string>
+    <string name="con_head">Constitution:</string>
+    <string name="int_head">Intelligence:</string>
+    <string name="wis_head">Wisdom:</string>
+    <string name="char_head">Charisma:</string>
+
+
+    <string name="set_stats">\?</string>
+    <string name="sample_stat">12</string>
+    <string name="sample_TempHP">0</string>
+    <string name="sample_HP">30</string>
+    <string name="sample_AC">12</string>
+
+    <string name="rest_head">Rest</string>
+    <string name="restBtn_text"><![CDATA[<3]]></string>
+    <string name="level_up">Level Up:</string>
+
+    <string name="SavingThrow_Header">Saving Throws</string>
+
+    <string name="death_save_header">Death Save</string>
+    <string name="roll">Roll</string>
+    <string name="death_success_header">Successes:</string>
+    <string name="death_fail_header">Failed</string>
+
+    <string name="skillsTable_head">Skills</string>
+    <string name="acro_head">Acrobatics</string>
+    <string name="Animal_head">Animal Handling</string>
+    <string name="arcana_head">Arcana</string>
+    <string name="ath_head">Athletics</string>
+    <string name="deception_head">Deception</string>
+    <string name="history_head">History</string>
+    <string name="insight_head">Insight</string>
+    <string name="intimidate_head">Intimidation</string>
+    <string name="invest_head">Investigation</string>
+    <string name="medicine_head">Medicine</string>
+    <string name="nature_head">Nature</string>
+    <string name="percept_head">Perception</string>
+    <string name="perform_head">Performance</string>
+    <string name="persuade_head">Persuasion</string>
+    <string name="religion_head">Religion</string>
+    <string name="SoH_head">Sleight of Hand</string>
+    <string name="stealth_head">Stealth</string>
+    <string name="survive_head">Survival</string>
+
+    <string name="speed_TwentyFive">25ft</string>
+    <string name="speed_Thirty">30ft</string>
+    <string name="speed_forty">40ft</string>
+    <string name="speed_Aarakocra">25ft + 50ft Flying</string>
+    <string name="speed_Grung">25ft + 25ft Climb</string>
+    <string name="speed_LizardTriton">30ft + 30ft Swim</string>
+    <string name="speed_SelectRace">Select Race</string>
+    <string name="speed_switchTest">Race is not being read</string>
+
+    <string name="plus_symbol">+</string>
+    <string name="string_Dashboard_Welcome">
+        <![CDATA[Welcome to the dashboard area of my final year
+    project mobile application. Within this application you will have access to; a dice rolling page
+     in the which the you can roll the 7 die used when playing Dungeons & Dragons aswell as a character
+     sheet page in which you can set your characters stats, and roll the corresponding dice at the touch
+     of the screen! \n\n You may navigate the application through the use of the navigation panel
+found on the left of the screen at anytime.]]></string>
+
+    <string-array name="races">
+        <item>Select race</item>
+        <item>Aarakocra</item>
+        <item>Aasimar</item>
+        <item>Bugbear</item>
+        <item>Centaur</item>
+        <item>Changeling</item>
+        <item>Dragonborn</item>
+        <item>Dwarf</item>
+        <item>Elf</item>
+        <item>Firbolg</item>
+        <item>Genasi</item>
+        <item>Gith</item>
+        <item>Gnome</item>
+        <item>Goblin</item>
+        <item>Goliath</item>
+        <item>Grung</item>
+        <item>Half-Elf</item>
+        <item>Half-Orc</item>
+        <item>Halfling</item>
+        <item>Hobgoblin</item>
+        <item>Human</item>
+        <item>Kalashtar</item>
+        <item>Kenku</item>
+        <item>Kobold</item>
+        <item>Lizardfolk</item>
+        <item>Loxodon</item>
+        <item>Minotaur</item>
+        <item>Orc</item>
+        <item>Shifter</item>
+        <item>Simic Hybrid</item>
+        <item>Tabaxi</item>
+        <item>Tiefling</item>
+        <item>Tortle</item>
+        <item>Triton</item>
+        <item>Vedalken</item>
+        <item>Warforged</item>
+        <item>Yuan-ti Pureblood</item>
+
+    </string-array>
+
+    <string-array name="classes">
+        <item>Select class</item>
+        <item>Artificer</item>
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Blood Hunter</item>
+        <item>Cleric</item>
+        <item>Druid</item>
+        <item>Fighter</item>
+        <item>Monk</item>
+        <item>Paladin</item>
+        <item>Ranger</item>
+        <item>Rogue</item>
+        <item>Sorcerer</item>
+        <item>Warlock</item>
+        <item>Wizard</item>
+
+    </string-array>
+
+    <string-array name="alignments">
+        <item>Select Alignment</item>
+
+        <item>Lawful Good</item>
+        <item>Lawful Neutral</item>
+        <item>Lawful Evil</item>
+
+        <item>Neutral Good</item>
+        <item>True Neutral</item>
+        <item>Neutral Evil</item>
+
+        <item>Chaotic Good</item>
+        <item>Chaotic Neutral</item>
+        <item>Chaotic Evil</item>
+    </string-array>
+
+
 </resources>

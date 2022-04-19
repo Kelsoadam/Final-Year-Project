@@ -2,238 +2,1253 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:label="Home"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textStrength"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Strength"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textStrMod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="7dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStrength" />
-
     <EditText
-        android:id="@+id/editStrScore"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
+        android:id="@+id/editTextMaxHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:hint="@string/sample_HP"
+        android:text="8"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textIntelligence"
-        app:layout_constraintEnd_toEndOf="@+id/textStrength"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="@+id/textStrength"
-        app:layout_constraintTop_toBottomOf="@+id/textStrMod"
-        app:layout_constraintVertical_bias="0.145"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textMaxHP_head"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
+        app:layout_constraintStart_toEndOf="@+id/textMaxHP_head"
+        app:layout_constraintStart_toStartOf="@+id/editTextAC"
+        app:layout_constraintTop_toTopOf="@+id/textMaxHP_head"
+        app:layout_constraintVertical_bias="0.388" />
 
-    <TextView
-        android:id="@+id/textDexterity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:text="Dexterity"
-        app:layout_constraintStart_toEndOf="@+id/textStrength"
-        app:layout_constraintTop_toTopOf="@+id/textStrength" />
-
-    <TextView
-        android:id="@+id/textDexMod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/textConMod"
-        app:layout_constraintStart_toEndOf="@+id/textStrMod"
-        app:layout_constraintTop_toBottomOf="@+id/textDexterity" />
-
-    <EditText
-        android:id="@+id/editDexScore"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textWisdom"
-        app:layout_constraintEnd_toEndOf="@+id/textDexterity"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="@+id/textDexterity"
-        app:layout_constraintTop_toBottomOf="@+id/textDexMod"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textConstitution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="63dp"
-        android:layout_marginEnd="24dp"
-        android:text="Constitution"
-        app:layout_constraintBottom_toTopOf="@+id/textCharisma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textDexterity"
-        app:layout_constraintTop_toTopOf="@+id/textDexterity" />
-
-    <TextView
-        android:id="@+id/textConMod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="32dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textConstitution" />
-
-    <EditText
-        android:id="@+id/editConScore"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textCharisma"
-        app:layout_constraintEnd_toEndOf="@+id/textConstitution"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="@+id/textConstitution"
-        app:layout_constraintTop_toBottomOf="@+id/textConMod"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textIntelligence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="84dp"
-        android:text="Intelligence"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStrength" />
-
-    <TextView
-        android:id="@+id/textIntMod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="3dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/editIntScore"
-        app:layout_constraintEnd_toStartOf="@+id/textWisMod"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textIntelligence" />
-
-    <EditText
-        android:id="@+id/editIntScore"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="3dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/textIntelligence"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="@+id/textIntelligence"
-        app:layout_constraintTop_toBottomOf="@+id/textIntMod" />
-
-    <TextView
-        android:id="@+id/textWisdom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="84dp"
-        android:text="Wisdom"
-        app:layout_constraintStart_toEndOf="@+id/textIntelligence"
-        app:layout_constraintTop_toBottomOf="@+id/textDexterity" />
-
-    <TextView
-        android:id="@+id/textWisMod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="3dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/editWisScore"
-        app:layout_constraintEnd_toStartOf="@+id/textCharMod"
-        app:layout_constraintStart_toEndOf="@+id/textIntMod"
-        app:layout_constraintTop_toBottomOf="@+id/textWisdom" />
-
-    <EditText
-        android:id="@+id/editWisScore"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="3dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/editIntScore"
-        app:layout_constraintEnd_toEndOf="@+id/textWisdom"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="@+id/textWisdom"
-        app:layout_constraintTop_toBottomOf="@+id/textWisMod"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textCharisma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="24dp"
-        android:text="Charisma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toEndOf="@+id/textWisdom"
-        app:layout_constraintTop_toBottomOf="@+id/textConstitution" />
-
-    <TextView
-        android:id="@+id/textCharMod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="3dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/editCharScore"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textWisMod"
-        app:layout_constraintTop_toBottomOf="@+id/textCharisma" />
-
-    <EditText
-        android:id="@+id/editCharScore"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="3dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/editWisScore"
-        app:layout_constraintEnd_toEndOf="@+id/textCharisma"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="@+id/textCharisma"
-        app:layout_constraintTop_toBottomOf="@+id/textCharMod"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/NavButtonDiceRolls"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="259dp"
-        android:text="Dice Roller"
+    <View
+        android:id="@+id/dividerNavHeader"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/CharName_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCharacterName"
+        app:layout_constraintStart_toStartOf="@+id/editTextCharacterName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCharacterName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextCharacterName"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/sample_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/CharClass_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/class_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toEndOf="@+id/editTextCharacterName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/CharLevel_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/level_head"
+        app:layout_constraintBottom_toBottomOf="@+id/CharClass_Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/CharClass_Header"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/CharRace_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="572dp"
+        android:text="@string/race_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/CharName_header"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharName_header"
+        app:layout_constraintTop_toBottomOf="@+id/CharName_header"
+        app:layout_constraintVertical_bias="0.23000002" />
+
+    <TextView
+        android:id="@+id/CharAlignment_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/align_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <EditText
+        android:id="@+id/editTextCharLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:hint="@string/sample_level"
+        android:inputType="number"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/CharLevel_Header"
+        app:layout_constraintStart_toStartOf="@+id/CharLevel_Header"
+        app:layout_constraintTop_toBottomOf="@+id/CharLevel_Header"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/selectRace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CharRace_Header"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/selectClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CharClass_Header"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/selectAlignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/CharAlignment_Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CharAlignment_Header"
+        app:layout_constraintTop_toTopOf="@+id/CharAlignment_Header"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <View
+        android:id="@+id/dividerStats"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="120dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/dividerHealth"
+        android:layout_width="1dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginEnd="238dp"
+        android:layout_marginBottom="139dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/ac_head"
+        app:layout_constraintBottom_toTopOf="@+id/dividerStats"
+        app:layout_constraintEnd_toStartOf="@+id/dividerHealth"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerNavHeader"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/textViewInit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/initiative_head"
+        app:layout_constraintEnd_toStartOf="@+id/scrollViewRolls"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewAC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAC" />
+
+    <TextView
+        android:id="@+id/textViewSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/speed_head"
+        app:layout_constraintEnd_toEndOf="@+id/textViewInit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewInit"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInit" />
+
+    <TextView
+        android:id="@+id/textMaxHP_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/maxHP_head"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSpeed"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="@+id/textViewSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpeed" />
+
+    <TextView
+        android:id="@+id/textViewCurrHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/currentHP_head"
+        app:layout_constraintEnd_toEndOf="@+id/textMaxHP_head"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textMaxHP_head"
+        app:layout_constraintTop_toBottomOf="@+id/textMaxHP_head" />
+
+    <TextView
+        android:id="@+id/textViewTempHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempHit_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrHealth"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrHealth"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCurrHP"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textSpeed_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSpeed"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
+        app:layout_constraintStart_toStartOf="@+id/editTextAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewSpeed" />
+
+    <TextView
+        android:id="@+id/textInit_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewInit"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAC"
+        app:layout_constraintStart_toEndOf="@+id/textViewAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewInit" />
+
+    <EditText
+        android:id="@+id/editTextAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:hint="@string/sample_AC"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAC"
+        app:layout_constraintStart_toEndOf="@+id/textViewAC"
+        app:layout_constraintTop_toTopOf="@+id/textViewAC"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/editTextTempHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="@string/sample_TempHP"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCurrHP"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="@+id/editTextCurrHP"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempHealth"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/editTextCurrHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="@string/sample_HP"
+        android:text="8"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCurrHealth"
+        app:layout_constraintStart_toStartOf="@+id/textViewCurrHealth"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrHealth"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill" />
+
+    <ScrollView
+        android:id="@+id/scrollViewRolls"
+        android:layout_width="236dp"
+        android:layout_height="450dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/dividerStats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dividerHealth"
+        app:layout_constraintTop_toBottomOf="@+id/selectAlignment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/TableMisc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    android:id="@+id/TableInitiative"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/skillHeadInit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/initiative_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnInit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/headLevelUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/rest_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnRest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/restBtn_text" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/skillHeadLevelUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/level_up" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnLvlUp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="+" />
+                    </TableRow>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableSavingThrows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:text="@string/SavingThrow_Header"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadStrength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/strength_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnStrSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadDex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dex_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnDexSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadCon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/con_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnConSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadInt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/int_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnIntSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadWisdom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/wis_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnWisSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadChar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/char_head" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnCharSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableDeathSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtDeathSaveHeader"
+                    android:text="@string/death_save_header"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/DeathSaveHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/death_save_header"
+                        android:textAlignment="center" />
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/btnDeathSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onClick"
+                            android:textSize="10sp"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/roll" />
+                        <Button
+                            android:id="@+id/btnDeathReset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:onClick="onClick"
+                            android:text="Reset"
+                            />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/DeathSaveSucceedHead"
+                        android:text="@string/death_success_header" />
+
+                    <TextView
+                        android:id="@+id/Successes"
+                        android:text=""
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/DeathSaveFailHead"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/death_fail_header"
+                        android:textAlignment="center" />
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/fails"
+                            android:text=""
+                            android:textAlignment="center" />
+                    </TableRow>
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableSkills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txtSkillsTableHeader"
+                    android:text="@string/skillsTable_head"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadAcrobatics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/acro_head" />
+
+
+                    <Button
+                        android:id="@+id/btnAcrobatics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadAnimal_Handling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/Animal_head" />
+
+
+                    <Button
+                        android:id="@+id/btnAnimal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadArcana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/arcana_head" />
+
+
+                    <Button
+                        android:id="@+id/btnArcana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadAthletics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/ath_head" />
+
+
+                    <Button
+                        android:id="@+id/btnAthletics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadDeception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/deception_head" />
+
+
+                    <Button
+                        android:id="@+id/btnDeception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/history_head" />
+
+
+                    <Button
+                        android:id="@+id/btnHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadInsight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/insight_head" />
+
+
+                    <Button
+                        android:id="@+id/btnInsight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadIntimidation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/intimidate_head" />
+
+
+                    <Button
+                        android:id="@+id/btnIntimidation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadInvestigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/invest_head" />
+
+
+                    <Button
+                        android:id="@+id/btnInvestigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadMedicine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/medicine_head" />
+
+
+                    <Button
+                        android:id="@+id/btnMedicine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadNature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/nature_head" />
+
+
+                    <Button
+                        android:id="@+id/btnNature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadPerception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/percept_head" />
+
+
+                    <Button
+                        android:id="@+id/btnPerception"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadPerformance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/perform_head" />
+
+
+                    <Button
+                        android:id="@+id/btnPerformance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadPersuasion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/persuade_head" />
+
+
+                    <Button
+                        android:id="@+id/btnPersuasion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadReligion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/religion_head" />
+
+
+                    <Button
+                        android:id="@+id/btnReligion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadSleightOfHand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/SoH_head" />
+
+
+                    <Button
+                        android:id="@+id/btnSoH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadStealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/stealth_head" />
+
+
+                    <Button
+                        android:id="@+id/btnStealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+
+                <TableRow android:layout_width="wrap_content">
+
+                    <TextView
+                        android:id="@+id/skillHeadSurvival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/survive_head" />
+
+
+                    <Button
+                        android:id="@+id/btnSurvival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:onClick="onClick"
+                        android:text="@string/set_stats" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollViewStats"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerStats">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:id="@+id/LeftStatTable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TableRow android:id="@+id/TableRowStrength">
+
+                    <TextView
+                        android:id="@+id/textStrHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/strength_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextStr"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <TableRow>
+
+                            <Button
+                                android:id="@+id/btnStrength"
+                                android:layout_width="wrap_content"
+                                android:onClick="onClick"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="@string/set_stats" />
+                        </TableRow>
+                    </TableRow>
+
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowDexterity">
+
+                    <TextView
+                        android:id="@+id/textDexHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dex_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextDex"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnDexterity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onClick"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowConstitution">
+
+                    <TextView
+                        android:id="@+id/textConHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/con_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextCon"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnConstitution"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/RightStatTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp">
+
+                <TableRow android:id="@+id/TableRowIntelligence">
+
+                    <TextView
+                        android:id="@+id/textIntHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/int_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextInt"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnIntelligence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onClick"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowWisdom">
+
+                    <TextView
+                        android:id="@+id/textWisHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/wis_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextWis"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnWisdom"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+
+                <TableRow android:id="@+id/TableRowCharisma">
+
+                    <TextView
+                        android:id="@+id/textCharHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/char_head" />
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/editTextChar"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:ems="2"
+                            android:hint="@string/sample_stat"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnCharisma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:onClick="onClick"
+                            android:text="@string/set_stats" />
+                    </TableRow>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

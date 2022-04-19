@@ -2,13 +2,12 @@
 
 ## Current features
 
+- Splash Screen
 - Dice roller
 - Navigation
-- Splash Screen
+- Character sheet
+- Sheet rolls show on popup window
+  - Breakdown of roll shown
+
 
 ## Recent Patch notes
-
-### V1.2.1
-
-- Fixed the dice roller's code so that it no longer sets the result TextView in the main DiceRolls methods
-- Fixed the layout of the Dice Roller so that the ```D4```, ```D6```, and ```D8``` buttons are further from activity header
